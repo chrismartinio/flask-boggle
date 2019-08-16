@@ -9,13 +9,16 @@
   <tr><td>{{ row }}</td></tr>
 
   {% endfor %}
+
+<p>Score <span id="score"></span></p>
+<p>Timer <span id="timer"></span></p>
+
 </table>
-
-
 <form action="/submit" method="POST">
   Take a guess <input id="guess" type='text' name='guess'>
   <button id="submit_button" type='submit'>Submit</button>
 </form>
 
+<p id="validity"></p>
 
 {% endblock %}
