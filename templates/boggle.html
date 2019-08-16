@@ -2,4 +2,20 @@
 
 {% block content %}
 
+<table>
+
+  {% for row in board %}
+
+  <tr><td>{{ row }}</td></tr>
+
+  {% endfor %}
+</table>
+
+
+<form action="/submit" method="POST">
+  Take a guess <input id="guess" type='text' name='guess'>
+  <button id="submit_button" type='submit'>Submit</button>
+</form>
+
+
 {% endblock %}
