@@ -1,5 +1,5 @@
 from boggle import Boggle
-from flask import Flask, render_template, request, session, jsonify
+from flask import Flask, render_template, request, session, jsonify, redirect
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'password'
@@ -30,7 +30,7 @@ def record_scores():
     # all_scores.append(request.json['score'])
     print(request.json['score'])
     
-    import pdb
-    pdb.set_trace()
+    # import pdb
+    # pdb.set_trace()
 
-    return redirect('/')
+    return jsonify(request.json['score'])
